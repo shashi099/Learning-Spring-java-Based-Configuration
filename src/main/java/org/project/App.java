@@ -15,7 +15,7 @@ public class App {
         ApplicationContext context =
                 new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Desktop dk = context.getBean(Desktop.class);
+        Desktop dk = context.getBean("desktop", Desktop.class);
         dk.compile();
     }
 }
