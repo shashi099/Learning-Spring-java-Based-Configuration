@@ -15,11 +15,16 @@ public class App {
         ApplicationContext context =
                 new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Desktop dk = context.getBean(Desktop.class);
-        dk.compile();
+        Alien obj = context.getBean(Alien.class);
+        System.out.println(obj.getAge());
+        obj.code();
 
-        Desktop dk1 = context.getBean(Desktop.class);
-        dk.compile();
+
+//        Desktop dk = context.getBean(Desktop.class);
+//        dk.compile();
+//
+//        Desktop dk1 = context.getBean(Desktop.class);
+//        dk.compile();
     }
 }
 
